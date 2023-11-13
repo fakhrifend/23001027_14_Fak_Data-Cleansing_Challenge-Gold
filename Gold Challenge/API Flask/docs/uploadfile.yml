@@ -1,0 +1,21 @@
+tags:
+  - name: Upload File
+post:
+  summary: Upload a CSV file and process it
+  tags:
+    - Upload File
+  consumes:
+    - multipart/form-data
+  parameters:
+    - name: file
+      in: formData
+      type: file
+      description: The CSV file to upload and process
+      required: true
+responses:
+  "200":
+    description: Successful response
+  "400":
+    description: Bad Request
+  "500":
+    description: Internal Server Error
